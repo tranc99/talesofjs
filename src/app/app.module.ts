@@ -21,7 +21,7 @@ const appRoutes: Routes = [
   { path: 'social', component: SocialComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'email', component: EmailComponent },
-  { path: 'animation', component: AnimationComponent }
+  { path: 'animations', component: AnimationComponent }
 ]
 
 @NgModule({
