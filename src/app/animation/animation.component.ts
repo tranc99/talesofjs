@@ -17,8 +17,8 @@ import { Component, OnInit, transition, trigger, state, style, animate } from '@
         'border-radius':'10px',
         'height':'50px'
       })),
-      transition('void => *', animate('5000ms')),
-      transition('* => *', animate('500ms'))
+      transition('void => *', animate('2s 1s ease-in-out')),
+      transition('* => *', animate('2s 1s cubic-bezier(.17,.67,.89, 1.49)'))
     ])
   ],
   templateUrl: './animation.component.html',
