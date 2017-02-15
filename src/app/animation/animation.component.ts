@@ -33,4 +33,16 @@ export class AnimationComponent implements OnInit {
     }
   }
 
+  onGoClick() {
+    this.count++;
+    console.log("changing the shade");
+    this.shade = 'go';
+  }
+
+  onStopClick() {
+    this.count++;
+    console.log("changing the shade");
+    this.shade = 'stop';
+  }
+
 }
