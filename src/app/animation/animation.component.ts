@@ -21,6 +21,7 @@ export class AnimationComponent implements OnInit {
 
   changeShade() {
     console.log("changing the shade");
+    this.shade = 'go';
   }
 
 }
