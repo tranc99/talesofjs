@@ -4,6 +4,9 @@ import { Component, OnInit, transition, trigger, state, style, animate } from '@
   selector: 'app-animation',
   animations: [
     trigger('cognify', [
+      state('void', style({
+        'background-color':'blue',
+      })),
       state('go', style({
         'background-color':'green',
         'heght':'100px'
@@ -13,6 +16,7 @@ import { Component, OnInit, transition, trigger, state, style, animate } from '@
         'border-radius':'10px',
         'height':'50px'
       })),
+      transition('void => *', animate('5000ms')),
       transition('* => *', animate('500ms'))
     ])
   ],
