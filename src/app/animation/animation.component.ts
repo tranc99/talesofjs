@@ -6,6 +6,10 @@ import { Component, OnInit, trigger, state, style } from '@angular/core';
     trigger('cognify', [
       state('go', style({
         'background-color':'green'
+      })),
+      state('stop', style({
+        'background-color':'red',
+        'border-radius':'10px'
       }))
     ])
   ],
@@ -13,6 +17,7 @@ import { Component, OnInit, trigger, state, style } from '@angular/core';
   styleUrls: ['./animation.component.css']
 })
 export class AnimationComponent implements OnInit {
+  count: number = 0;
   shade: string;
   constructor() { }
 
@@ -20,8 +25,12 @@ export class AnimationComponent implements OnInit {
   }
 
   changeShade() {
+    this.count++;
     console.log("changing the shade");
     this.shade = 'go';
+    if ((this.count % 2) !== 0) {
+      this.shade = 'stop';
+    }
   }
 
 }
