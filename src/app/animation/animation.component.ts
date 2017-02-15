@@ -5,11 +5,13 @@ import { Component, OnInit, transition, trigger, state, style, animate } from '@
   animations: [
     trigger('cognify', [
       state('go', style({
-        'background-color':'green'
+        'background-color':'green',
+        'heght':'100px'
       })),
       state('stop', style({
         'background-color':'red',
-        'border-radius':'10px'
+        'border-radius':'10px',
+        'height':'50px'
       })),
       transition('* => *', animate('500ms'))
     ])
