@@ -12,6 +12,7 @@ import { BeerComponent } from './beer/beer.component';
 import { EmailComponent } from './email/email.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SocialComponent } from './social/social.component';
+import { HomeComponent } from './home/home.component';
 
 // Set up our routes
 const appRoutes: Routes = [
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     SettingsComponent,
     EmailComponent,
     SettingsComponent,
-    SocialComponent
+    SocialComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
