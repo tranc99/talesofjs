@@ -6,14 +6,14 @@ import { ChatService } from './chat.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ WebsocketService, ChatService ]
+  providers: []
 })
 export class AppComponent {
 
-  constructor(private chatService: ChatService) {
-    chatService.messages.subscribe(msg => {
-      console.log("Response from websocket: " + msg);
-    });
+  constructor() {
+    // chatService.messages.subscribe(msg => {
+    //   console.log("Response from websocket: " + msg);
+    // });
   }
 
   private message = {
