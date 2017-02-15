@@ -1,4 +1,4 @@
-import { Component, OnInit, trigger, state, style } from '@angular/core';
+import { Component, OnInit, transition, trigger, state, style, animate } from '@angular/core';
 
 @Component({
   selector: 'app-animation',
@@ -10,7 +10,8 @@ import { Component, OnInit, trigger, state, style } from '@angular/core';
       state('stop', style({
         'background-color':'red',
         'border-radius':'10px'
-      }))
+      })),
+      transition('* => *', animate('500ms'))
     ])
   ],
   templateUrl: './animation.component.html',
