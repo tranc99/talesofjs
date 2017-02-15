@@ -1,4 +1,4 @@
-import { Component, OnInit, transition, trigger, state, style, animate } from '@angular/core';
+import { Component, OnInit, keyframes, transition, trigger, state, style, animate } from '@angular/core';
 
 @Component({
   selector: 'app-animation',
@@ -17,7 +17,14 @@ import { Component, OnInit, transition, trigger, state, style, animate } from '@
         'border-radius':'10px',
         'height':'50px'
       })),
-      transition('void => *', animate('2s 1s ease-in-out')),
+      transition('void => *', animate(5000, keyframes([
+        style({'transform':'scale(0)'}),
+        style({'transform':'scale(0.1)'}),
+        style({'transform':'scale(0.5)'}),
+        style({'transform':'scale(0.9)'}),
+        style({'transform':'scale(0.95)'}),
+        style({'transform':'scale(1)'})
+      ]))),
       transition('* => *', animate('2s 1s cubic-bezier(.17,.67,.89, 1.49)'))
     ])
   ],
