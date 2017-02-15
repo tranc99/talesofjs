@@ -25,6 +25,7 @@ export class AnimationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.shade = "stop";
   }
 
   changeShade() {
