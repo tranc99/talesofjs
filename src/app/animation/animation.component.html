@@ -4,8 +4,11 @@
 <div
   (click)="changeShade()"
   [@cognify]="shade"
-  class="traffic-light">
+  class="traffic-light"
+  *ngIf="isHere">
 
 </div>
 <button (click)="onGoClick()">Go</button>
 <button (click)="onStopClick()">Stop</button>
+<hr>
+<button (click)="onToggleClick()">Toggle</button>

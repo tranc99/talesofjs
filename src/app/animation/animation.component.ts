@@ -6,6 +6,7 @@ import { Component, OnInit, transition, trigger, state, style, animate } from '@
     trigger('cognify', [
       state('void', style({
         'background-color':'blue',
+        'transform':'translateY(-100%)'
       })),
       state('go', style({
         'background-color':'green',
@@ -26,6 +27,8 @@ import { Component, OnInit, transition, trigger, state, style, animate } from '@
 export class AnimationComponent implements OnInit {
   count: number = 0;
   shade: string;
+  isHere = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -51,6 +54,11 @@ export class AnimationComponent implements OnInit {
     this.count++;
     console.log("changing the shade");
     this.shade = 'stop';
+  }
+
+  onToggleClick() {
+    console.log("isHere now ", this.isHere);
+    this.isHere = !this.isHere;
   }
 
 }
