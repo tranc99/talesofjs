@@ -17,7 +17,7 @@ import { Component, OnInit, keyframes, transition, trigger, state, style, animat
         'border-radius':'10px',
         'height':'50px'
       })),
-      transition('void => *', animate(5000, keyframes([
+      transition('void <=> *', animate(5000, keyframes([
         style({'transform':'scale(0)'}),
         style({'transform':'scale(0.1)'}),
         style({'transform':'scale(0.5)'}),
