@@ -13,13 +13,15 @@ import { EmailComponent } from './email/email.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SocialComponent } from './social/social.component';
 import { HomeComponent } from './home/home.component';
+import { AnimationComponent } from './animation/animation.component';
 
 // Set up our routes
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'social', component: SocialComponent },
   { path: 'settings', component: SettingsComponent },
-  { path: 'email', component: EmailComponent }
+  { path: 'email', component: EmailComponent },
+  { path: 'animation', component: AnimationComponent }
 ]
 
 @NgModule({
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     EmailComponent,
     SettingsComponent,
     SocialComponent,
-    HomeComponent
+    HomeComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,
