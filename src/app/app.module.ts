@@ -2,22 +2,42 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 import { UserModule } from './users/users.module';
 import { UserComponent } from './users/user.component';
 import { BeerComponent } from './beer/beer.component';
+import { EmailComponent } from './email/email.component';
+import { SettingsComponent } from './settings/settings.component';
+import { SocialComponent } from './social/social.component';
+
+// Set up our routes
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'social', component: SocialComponent },
+  { path: 'settings', component: SettingsComponent },
+  { path: 'email', component: EmailComponent }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    BeerComponent
+    BeerComponent,
+    EmailComponent,
+    HomeComponent,
+    SettingsComponent,
+    EmailComponent,
+    SettingsComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    UserModule
+    UserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
